@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f179d79512.js" crossorigin="anonymous"></script>
+    <title>About Salman</title>
+</head>
+<style>
+    body{
+        overflow: auto;
+    }
+</style>
+<body>
+    <div class="back-btn">
+        <a href="index.html">
+            <i class="fas fa-arrow-circle-left"></i>
+        </a>
+    </div>
+    <div class="banner">
+        <div class="about-us">
+            <h1>About Us</h1>
+            <p>Welcome to my website. I am a web developer with over 3 years of experience I am a freelancer I worked on the Upwork platform and made a lot of websites like stremo.com and yakeenkar.com. I would like to inform you also that I am highly skilled with HTML, CSS, and JavaScrip as I have handsome experience with them. Still, I am always eager to learn anew and make my skill sharper whenever I get any chance.
+                Above the beyond, I have a great passion for mobile and software technology as well. I have worked with some mobile companies and enjoyed the work a lot. My recruiters are always delighted with my creativity, hard-working and stamina.</p>
+              <h2>Get Do not miss this special offer</h2>
+              <div class="upwork-gig">
+                 <a href="#" class="upwork-link">Upwork</a> 
+              </div>
+              <span>5% off</span>
+                <section class="counters">
+                <div class="container">
+                    <div class="counter-box">
+                        <div class="counter" data-target="60000">0</div>
+                        <h3>Clients</h3>
+                    </div>
+                    <div class="counter-box">
+                        
+                        <div class="counter" data-target="15000">0</div>
+                        <h3>Created website</h3>
+                    </div>
+                    <div class="counter-box">
+                       
+                        <div class="counter" data-target="9000">0</div>
+                        <h3>Landing pages design</h3>
+                    </div>
+                    <div class="counter-box">
+                       
+                        <div class="counter" data-target="5000">0</div>
+                        <h3>Bug fixes</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+       
+    </div>
+
+    <script>
+const counters = document.querySelectorAll('.counter');
+const speed = 200; // The lower the slower
+
+counters.forEach(counter => {
+	const updateCount = () => {
+		const target = +counter.getAttribute('data-target');
+		const count = +counter.innerText;
+
+		// Lower inc to slow and higher to slow
+		const inc = target / speed;
+
+		// console.log(inc);
+		// console.log(count);
+
+		// Check if target is reached
+		if (count < target) {
+			// Add inc to count and output in counter
+			counter.innerText = count + inc;
+			// Call function every ms
+			setTimeout(updateCount, 1);
+		} else {
+			counter.innerText = target;
+		}
+	};
+
+	updateCount();
+});
+
+    </script>
+</body>
+</html>

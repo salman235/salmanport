@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+body{
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-top: 5px solid orange;
+    color: black;
+}
+::selection{
+  background-color: orange;
+  color: red;
+  border: 2px solid red;
+}
+*{
+  box-sizing: border-box;
+}
+.overlay-1{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    animation: 10s animate linear infinite;
+    border: 1px solid orange;
+    color: red;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.bubble{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 50%;
+
+}
+.social-links{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.social-links a{
+    color: white;
+    transition: 1s;
+    padding: 15px;
+}
+.social-links a:hover{
+    transform: scale(2.2);
+}
+/* mouse cursor */
+.cursor1{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+    z-index: 22222222;
+  }
+  
+.cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #c6c6c6;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .15s;
+    z-index: 22222222;
+
+  }
+  
+  .content:hover ~ .cursor{
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: #c6c6c6;
+    opacity: .5;
+  }
+  
+  .content:hover ~ .cursor2{
+    opacity: 0;
+  }
+
+/* animation end */
+a:hover{
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 30px 50px;
+    font-family: 'Ranchers', cursive;
+      
+
+  }
+header a{
+    color: orange;
+    text-decoration: none;
+  } 
+header .logo{
+    font-size: 25px;
+    color: orange;
+  }
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgb(145, 106, 35),rgba(255, 166, 0, 0.774)) ;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+  }
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+.profile{
+      width: 300px;
+      height: 300px;
+      margin: 0% auto;
+      overflow: hidden;
+      background-image: url('../images/profile.png');
+      background-size: cover;
+      border-radius: 50%;
+      transition: 2s;
+      backface-visibility: hidden;
+      border-bottom: 5px solid orange;
+  }  
+  .profile:hover{
+    transform: rotateY(-20deg);
+    transform: rotateX(-20deg);
+    border-bottom: 10px solid orange;
+  }
+
+p.type-writer {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+  }
+  p.type-writer  span.typed-text {
+    font-weight: normal;
+    color: orange;
+  }
+  p.type-writer  span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  p.type-writer  span.cursor.typing {
+    animation: none;
+  }
+@keyframes blink {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
+  }
+
+  /* about us page style */
+  .back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 20px;
+    z-index: 1000;
+   }
+   .back-btn a{
+    color: orange;
+   } 
+  .banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .about-us{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(243, 181, 65, 0.856); */
+    padding: 50px 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-us h1{
+    font-family: 'Ranchers', cursive;
+
+  }
+ 
+  .about-us p{
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: justify;
+    padding: 0px 50px;
+  }
+
+  .counters {
+    width: 100%;
+    /* background: orange; */
+    color: #fff;
+    /* padding: 40px 20px; */
+    /* border-top: 3px lightskyblue solid; */
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .counters .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    text-align: center;
+  }
+  
+  .counters i {
+    color: lightskyblue;
+    margin-bottom: 5px;
+  }
+  
+  .counters .counter {
+    font-size: 45px;
+    margin: 10px 0;
+  }
+  .counter-box:not(:last-child){
+    border-right: 1px solid orange;
+  }
+  @media (max-width: 700px) {
+    .counters .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .counters .container > div:nth-of-type(1),
+    .counters .container > div:nth-of-type(2) {
+      border-bottom: 1px lightskyblue solid;
+      padding-bottom: 20px;
+    }
+  }
+ .upwork-link{
+    font-size: 30px;
+    color: green;
+    text-decoration: none;
+    margin: 0;
+ }
+ .card-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+ }
+ .card-main .card{
+  max-width: 300px;
+   /* height: 400px; */
+   background-color: #f1f0f0;
+   box-shadow: inset 0px 0px 10px black;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 20px;
+   border-bottom: 5px;
+   transition: 0.5s;
+   text-align: center;
+   padding: 0px 10px 20px ;
+  }
+  .card-main .card:hover{
+    transform: translateY(-5%);
+  }
+ .card .card-header h2{
+   font-size: 25px;
+   font-family: fantasy;
+   border-bottom: 1px solid orange;
+ }
+ .card .details-btn{
+   background-color: orange;
+   padding: 5px;
+   border-radius: 5px;
+ }
+ .card .details-btn a{
+   text-decoration: none;
+   color: black;
+ }
+ 
+ .swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.client1{
+  width: 70%;
+  height: 100%;
+}
+.client1 h1{
+  margin-bottom: 0;
+}
+.client1 .clent-review{
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+  background-color: rgb(0, 255, 85);
+}
+.client-review .header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.client-review ul{
+  margin: 0;
+}
+.client-review .header ul i{
+  color: orange;
+}
+.client-review .review-body{
+  width: 100%;
+  height: 300px;
+  border: 1px solid red;
+}
+.review-body .review-txt{
+  display: block;
+  border: 2px solid orange;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: inset 0px 0px 10px orange;
+}
+
+
+@media only screen and (max-width: 720px){
+  .client1{
+    width: 100%;
+    padding: 0px 7px;
+  }
+  .client1 h1{
+    font-size: 18px;
+  }
+  .client1 .header{
+    margin-top: 20px;
+  }
+  .client1 .header span{
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 670px){
+  .card-main{
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+ }
+ .card-main .card{
+   margin-top: 20px;
+  }
+}
